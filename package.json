@@ -1,0 +1,10 @@
+{
+  "name": "personal-website",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Sophie Zhou personal portfolio — retro collage magazine aesthetic",
+  "scripts": {
+    "dev": "python3 server.py",
+    "start": "python3 server.py"
+  }
+}

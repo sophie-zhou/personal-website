@@ -1,0 +1,9 @@
+.DS_Store
+.cursor/
+node_modules/
+*.log
+.vercel/
+recovered-site-versions/
+collage-versions/
+*.HEIC
+*.heic
