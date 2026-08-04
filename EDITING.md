@@ -6,7 +6,6 @@ Open the matching HTML file:
 
 - `index.html` — home
 - `work.html` — art, code, and research (combined)
-- `interests.html` — interests
 - `resume.html` — resume
 - `contact.html` — contact information
 
