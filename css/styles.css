@@ -1229,9 +1229,10 @@ body:has(.page-resume) {
   position: relative;
   z-index: 1;
   min-width: 0;
+  min-height: 318px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   padding: 16px 18px 14px;
   background: rgba(250, 242, 226, 0.88);
   box-shadow:
@@ -1390,6 +1391,10 @@ body:has(.page-resume) {
   font-size: 1.75rem;
   color: var(--color-cobalt);
   margin: 0 0 18px;
+}
+
+.hero-copy-panel .meta-row {
+  margin-top: auto;
 }
 
 .hero-body {
