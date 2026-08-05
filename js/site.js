@@ -94,7 +94,7 @@
   (function placeLandscapeMountain() {
     var piece = collage.querySelector('[data-collage-id="landscape-mountain"]');
     if (!piece) return;
-    var storageKey = 'sophie-portfolio-collage-layout-v1';
+    var storageKey = 'sophie-portfolio-collage-layout-v2';
     var saved = null;
     try {
       saved = JSON.parse(localStorage.getItem(storageKey) || '{}');
@@ -141,7 +141,7 @@
 
   function loadCollageEditor() {
     var collageEditor = document.createElement('script');
-    collageEditor.src = 'js/collage-editor.js?v=18';
+    collageEditor.src = 'js/collage-editor.js?v=20';
     document.body.appendChild(collageEditor);
   }
 

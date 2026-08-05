@@ -1,5 +1,5 @@
 (function () {
-  var storageKey = 'sophie-portfolio-collage-layout-v1';
+  var storageKey = 'sophie-portfolio-collage-layout-v2';
   var collage = document.querySelector('.collage-bg');
   if (!collage) return;
 
@@ -71,7 +71,12 @@
     '<p class="collage-editor-note">Edits save in this browser. Download a backup often, or copy the layout JSON into Cursor to make it permanent.</p>'
   ].join('');
 
-  document.body.appendChild(toggle);
+  var bottomDock = document.querySelector('.bottom-dock');
+  if (bottomDock) {
+    bottomDock.appendChild(toggle);
+  } else {
+    document.body.appendChild(toggle);
+  }
   document.body.appendChild(panel);
 
   var selectedName = panel.querySelector('.collage-selected-name');

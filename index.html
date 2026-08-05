@@ -3,52 +3,358 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sophie Zhou — Home</title>
+  <title>Sophie Zhou</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,700;0,900;1,400&family=Special+Elite&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css?v=96">
+  <link rel="stylesheet" href="css/styles.css?v=117">
+  <script>
+    (function () {
+      try {
+        var theme = localStorage.getItem('sophie-portfolio-theme') || 'dark';
+        document.documentElement.setAttribute('data-theme', theme === 'light' ? 'light' : 'dark');
+      } catch (error) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    })();
+  </script>
 </head>
 <body>
-  <div class="page">
-    <nav class="site-nav">
-      <a class="site-logo" href="index.html">Sophie Zhou</a>
-      <div class="site-links">
-        <a href="index.html">Home</a>
-        <a href="work.html">Work</a>
-        <a href="resume.html">Resume</a>
-        <a href="contact.html">Contact</a>
-      </div>
-    </nav>
+  <nav class="scroll-nav" aria-label="Page sections">
+    <span class="scroll-nav-rail" aria-hidden="true"></span>
+    <a href="#top" data-nav-section="top">
+      <span class="scroll-nav-label">Top</span>
+      <span class="scroll-nav-flower" aria-hidden="true">
+        <svg viewBox="0 0 32 32" focusable="false">
+          <g fill="currentColor">
+            <ellipse cx="16" cy="7.2" rx="5.2" ry="6.4"/>
+            <ellipse cx="16" cy="24.8" rx="5.2" ry="6.4"/>
+            <ellipse cx="7.2" cy="16" rx="6.4" ry="5.2"/>
+            <ellipse cx="24.8" cy="16" rx="6.4" ry="5.2"/>
+            <circle cx="16" cy="16" r="3.1"/>
+          </g>
+        </svg>
+      </span>
+    </a>
+    <a href="#work" data-nav-section="work">
+      <span class="scroll-nav-label">Work</span>
+      <span class="scroll-nav-flower" aria-hidden="true">
+        <svg viewBox="0 0 32 32" focusable="false">
+          <g fill="currentColor">
+            <ellipse cx="16" cy="7.2" rx="5.2" ry="6.4"/>
+            <ellipse cx="16" cy="24.8" rx="5.2" ry="6.4"/>
+            <ellipse cx="7.2" cy="16" rx="6.4" ry="5.2"/>
+            <ellipse cx="24.8" cy="16" rx="6.4" ry="5.2"/>
+            <circle cx="16" cy="16" r="3.1"/>
+          </g>
+        </svg>
+      </span>
+    </a>
+    <a href="#resume" data-nav-section="resume">
+      <span class="scroll-nav-label">Resume</span>
+      <span class="scroll-nav-flower" aria-hidden="true">
+        <svg viewBox="0 0 32 32" focusable="false">
+          <g fill="currentColor">
+            <ellipse cx="16" cy="7.2" rx="5.2" ry="6.4"/>
+            <ellipse cx="16" cy="24.8" rx="5.2" ry="6.4"/>
+            <ellipse cx="7.2" cy="16" rx="6.4" ry="5.2"/>
+            <ellipse cx="24.8" cy="16" rx="6.4" ry="5.2"/>
+            <circle cx="16" cy="16" r="3.1"/>
+          </g>
+        </svg>
+      </span>
+    </a>
+    <a href="#contact" data-nav-section="contact">
+      <span class="scroll-nav-label">Contact</span>
+      <span class="scroll-nav-flower" aria-hidden="true">
+        <svg viewBox="0 0 32 32" focusable="false">
+          <g fill="currentColor">
+            <ellipse cx="16" cy="7.2" rx="5.2" ry="6.4"/>
+            <ellipse cx="16" cy="24.8" rx="5.2" ry="6.4"/>
+            <ellipse cx="7.2" cy="16" rx="6.4" ry="5.2"/>
+            <ellipse cx="24.8" cy="16" rx="6.4" ry="5.2"/>
+            <circle cx="16" cy="16" r="3.1"/>
+          </g>
+        </svg>
+      </span>
+    </a>
+  </nav>
 
-    <main class="page-main">
-      <div class="layout-home">
-        <section class="scrap scrap-torn scrap-rotate-left hero-card">
-          <span class="tape tape-top-left"></span>
-          <div class="hero-card-row">
-            <div class="hero-copy-panel">
-              <p class="issue-label">Vol. I · Issue 01 · Stanford</p>
-              <h1 class="hero-title" aria-label="Hello, I'm Sophie Zhou!">
-                <span class="hero-title-type" data-text="Hello, I'm Sophie Zhou!"></span><span class="hero-title-cursor" aria-hidden="true"></span>
-              </h1>
-              <p class="hero-sub">Stanford · CS</p>
-              <div class="meta-row">
-                <span class="stamp stamp-blue">Bachelors of Science - BS</span>
+  <div class="page page-scroll">
+    <main class="page-main page-main-scrollsite">
+      <section class="site-section section-home" id="top">
+        <div class="layout-home">
+          <section class="scrap scrap-torn scrap-rotate-left hero-card">
+            <span class="tape tape-top-left"></span>
+            <div class="hero-card-row">
+              <div class="hero-copy-panel">
+                <p class="issue-label">Vol. I · Issue 01 · Stanford</p>
+                <h1 class="hero-title" aria-label="Hello, I'm Sophie Zhou!">
+                  <span class="hero-title-type" data-text="Hello, I'm Sophie Zhou!"></span><span class="hero-title-cursor" aria-hidden="true"></span>
+                </h1>
+                <p class="hero-sub">Stanford · CS</p>
+                <p class="hero-scroll-cue">
+                  <span class="hero-scroll-cue-text">Scroll to See More</span>
+                  <span class="hero-scroll-arrow" aria-hidden="true">
+                    <svg viewBox="0 0 32 36" focusable="false">
+                      <path
+                        d="M16 4c1.8 0 3.2 1.4 3.2 3.1v12.2h4.1c1.7 0 2.5 2.1 1.3 3.3l-7.3 7.4c-.7.7-1.9.7-2.6 0l-7.3-7.4c-1.2-1.2-.4-3.3 1.3-3.3h4.1V7.1C12.8 5.4 14.2 4 16 4z"
+                        fill="currentColor"
+                      />
+                    </svg>
+                  </span>
+                </p>
+                <div class="meta-row">
+                  <span class="stamp stamp-blue">Bachelors of Science - BS</span>
+                </div>
+              </div>
+              <div class="hero-headshot-frame">
+                <img class="hero-headshot" src="assets/sophie-headshot.png" alt="Portrait of Sophie Zhou">
               </div>
             </div>
-            <div class="hero-headshot-frame">
-              <img class="hero-headshot" src="assets/sophie-headshot.png" alt="Portrait of Sophie Zhou">
+          </section>
+
+          <aside class="collage-stack" aria-hidden="true">
+            <div class="landscape-size-ref"></div>
+          </aside>
+        </div>
+      </section>
+
+      <div class="content-veil" aria-hidden="true"></div>
+
+      <section class="site-section section-work" id="work">
+        <header class="page-header">
+          <h1 class="page-title">Work</h1>
+        </header>
+
+        <div class="work-toolbar">
+          <div class="tabs" data-work-tabs>
+            <button type="button" class="tab active" data-filter="art">Art Portfolio</button>
+            <button type="button" class="tab" data-filter="research">Research</button>
+          </div>
+          <p class="work-exhibit" data-work-exhibit="art" data-text="Art exhibited at Denver Art Museum, Manitou Art Center, True North Gallery" aria-label="Art exhibited at Denver Art Museum, Manitou Art Center, True North Gallery"></p>
+          <p class="work-exhibit" data-work-exhibit="research" data-text="Internationally published in IEEE and ACM" aria-label="Internationally published in IEEE and ACM" hidden></p>
+        </div>
+
+        <div class="work-section" data-work-section="art" id="art">
+          <div class="art-gallery">
+            <div class="art-col art-col-vert">
+              <figure class="art-piece art-vert" data-lightbox-caption="Unfiltered · 2025 · Mixed Media">
+                <img src="assets/art/phoenix.png" alt="Unfiltered">
+                <figcaption class="art-caption">
+                  <span class="art-caption-main">Unfiltered · 2025 · Mixed Media</span>
+                  <span class="art-caption-detail">Alcohol Marker · Gold Leaf · Ink · Collage</span>
+                </figcaption>
+              </figure>
+              <figure class="art-piece art-vert" data-lightbox-caption="CPR · 2024 · Mixed Media">
+                <img src="assets/art/cpr.png" alt="CPR">
+                <figcaption class="art-caption">
+                  <span class="art-caption-main">CPR · 2024 · Mixed Media</span>
+                  <span class="art-caption-detail">Charcoal · Alcohol Marker</span>
+                  <span class="art-caption-detail">National Scholastic Art Gold Key · Gold Key Portfolio · Juror's Choice</span>
+                </figcaption>
+              </figure>
+              <figure class="art-piece art-vert" data-lightbox-caption="One More Game! · 2025 · Mixed Media">
+                <img src="assets/art/joker.png" alt="One More Game!">
+                <figcaption class="art-caption">
+                  <span class="art-caption-main">One More Game! · 2025 · Mixed Media</span>
+                  <span class="art-caption-detail">Charcoal · Alcohol Marker · Gold Leaf · Collage</span>
+                  <span class="art-caption-detail">National Scholastic Art Gold Key Portfolio</span>
+                </figcaption>
+              </figure>
+              <figure class="art-piece art-vert" data-lightbox-caption="Burnt Out · 2024 · Charcoal">
+                <img src="assets/art/burnt-out.png" alt="Burnt Out">
+                <figcaption class="art-caption">
+                  <span class="art-caption-main">Burnt Out · 2024 · Charcoal</span>
+                  <span class="art-caption-detail">National Scholastic Art Gold Key · Gold Key Portfolio</span>
+                </figcaption>
+              </figure>
+            </div>
+            <div class="art-col art-col-horiz">
+              <figure class="art-piece art-horiz art-h1" data-lightbox-caption="Forgotten · 2024 · Charcoal">
+                <img src="assets/art/tablet.png" alt="Forgotten">
+                <figcaption class="art-caption">
+                  <span class="art-caption-main">Forgotten · 2024 · Charcoal</span>
+                  <span class="art-caption-detail">National Scholastic Art Gold Key · Gold Key Portfolio</span>
+                </figcaption>
+              </figure>
+              <figure class="art-piece art-horiz art-h2" data-lightbox-caption="Reflections · 2022 · Charcoal">
+                <img src="assets/art/duality.png" alt="Reflections">
+                <figcaption class="art-caption">
+                  <span class="art-caption-main">Reflections · 2022 · Charcoal</span>
+                  <span class="art-caption-detail">National Scholastic Art Gold Key · Best in State</span>
+                </figcaption>
+              </figure>
+              <figure class="art-piece art-horiz art-h3" data-lightbox-caption="Gratitude · 2026 · Oil Paint">
+                <img src="assets/art/sunset-meadow.png" alt="Gratitude">
+                <figcaption class="art-caption">
+                  <span class="art-caption-main">Gratitude · 2026 · Oil Paint</span>
+                </figcaption>
+              </figure>
+              <figure class="art-piece art-horiz art-h4" data-lightbox-caption="If She Saw You Now · 2025 · Mixed Media">
+                <img src="assets/art/reflections.png" alt="If She Saw You Now">
+                <figcaption class="art-caption">
+                  <span class="art-caption-main">If She Saw You Now · 2025 · Mixed Media</span>
+                  <span class="art-caption-detail">Alcohol Marker · 3D Collage</span>
+                </figcaption>
+              </figure>
+              <figure class="art-piece art-vert art-h-under" data-lightbox-caption="A Chipped Teacup · 2024 · Oil Paint">
+                <img src="assets/art/split-self.png" alt="A Chipped Teacup">
+                <figcaption class="art-caption">
+                  <span class="art-caption-main">A Chipped Teacup · 2024 · Oil Paint</span>
+                  <span class="art-caption-detail">National Scholastic Art Gold Key</span>
+                </figcaption>
+              </figure>
             </div>
           </div>
-        </section>
+        </div>
 
-        <aside class="collage-stack" aria-hidden="true">
-          <div class="landscape-size-ref"></div>
-        </aside>
-      </div>
+        <div class="work-section" data-work-section="research" id="research" hidden>
+          <div class="research-list">
+            <article class="research-card">
+              <h2>Dare to Plagiarize? Plagiarized Painting Recognition and Retrieval</h2>
+              <p>
+                A computer-vision study that builds a dataset of authentic and AI-generated
+                plagiarized paintings, then evaluates DINOv2-based methods for recognizing
+                plagiarism and retrieving the original artwork.
+              </p>
+              <a href="https://arxiv.org/pdf/2506.23132" target="_blank" rel="noopener noreferrer">Read the paper ↗</a>
+            </article>
+
+            <article class="research-card">
+              <h2>Unpacking Long-Latency Transactions in Ethereum</h2>
+              <p>
+                An empirical study using the Geth client to measure the computing, memory,
+                and bandwidth costs of delayed Ethereum transactions and identify the main
+                conditions that cause them.
+              </p>
+              <a href="https://dl.acm.org/doi/epdf/10.1145/3689931.3694909" target="_blank" rel="noopener noreferrer">Read the paper ↗</a>
+            </article>
+
+            <article class="research-card">
+              <h2>Understanding the Impact of Programming Club on Programming Experiences</h2>
+              <p>
+                An observational and interview study of programming clubs as non-formal
+                learning environments, identifying three activity types and six dimensions
+                of formality that shape participants’ programming experiences.
+              </p>
+              <a href="https://dl.acm.org/doi/10.1145/3688828.3699637" target="_blank" rel="noopener noreferrer">Read the paper ↗</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="site-section section-resume" id="resume">
+        <header class="page-header">
+          <h1 class="page-title">Resume</h1>
+        </header>
+
+        <div class="resume-body-row">
+          <a
+            class="resume-doc-link"
+            href="https://docs.google.com/document/d/1LYaHvRkWhB4AWYXOuvCVof0qU-4PgXpYcWTYtqKiqQI/edit?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span>(Open in another tab)</span>
+            <svg class="resume-doc-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path
+                fill="currentColor"
+                d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3zM5 5h6v2H7v10h10v-4h2v6H5V5z"
+              />
+            </svg>
+          </a>
+
+          <div class="resume-document">
+            <div class="resume-paper scrap-torn" aria-hidden="true"></div>
+            <img
+              class="resume-sheet"
+              src="assets/sophie-zhou-resume-2026.png?v=3"
+              alt="Sophie Zhou Resume 2026"
+            >
+          </div>
+        </div>
+      </section>
+
+      <section class="site-section section-contact" id="contact">
+        <header class="page-header contact-header">
+          <h1 class="page-title contact-title">Contact</h1>
+        </header>
+
+        <div class="contact-layout">
+          <form class="scrap scrap-torn scrap-rotate-left contact-form" action="#" method="post">
+            <span class="tape tape-top-left"></span>
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" placeholder="Your name" autocomplete="name">
+
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="you@example.com" autocomplete="email">
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Enter text here"></textarea>
+
+            <button class="btn" type="submit">Send Message</button>
+          </form>
+
+          <div class="scrap scrap-torn scrap-rotate-right">
+            <span class="tape tape-top-right"></span>
+            <p class="issue-label">Elsewhere</p>
+            <div class="contact-links">
+              <a class="contact-link" href="mailto:slzhou@stanford.edu">slzhou@stanford.edu</a>
+              <a class="contact-link" href="https://github.com/sophie-zhou" target="_blank" rel="noopener noreferrer">GitHub</a>
+              <a class="contact-link" href="https://www.linkedin.com/in/sophie-zhou-5025b8313/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+              <a class="contact-link" href="https://www.instagram.com/soph.z.art?utm_source=qr" target="_blank" rel="noopener noreferrer">Art Instagram</a>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
   </div>
-  <script src="js/site.js?v=44"></script>
-  <script src="js/home.js?v=1"></script>
+
+  <div class="bottom-dock">
+    <div class="theme-dock" aria-label="Color theme">
+      <button
+        type="button"
+        class="theme-btn theme-btn-light"
+        data-theme-choice="light"
+        aria-label="Light mode"
+        aria-pressed="false"
+      >
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <circle cx="12" cy="12" r="4.2" fill="currentColor"/>
+          <g stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <path d="M12 2.5v2.4"/>
+            <path d="M12 19.1v2.4"/>
+            <path d="M2.5 12h2.4"/>
+            <path d="M19.1 12h2.4"/>
+            <path d="M5.2 5.2l1.7 1.7"/>
+            <path d="M17.1 17.1l1.7 1.7"/>
+            <path d="M5.2 18.8l1.7-1.7"/>
+            <path d="M17.1 6.9l1.7-1.7"/>
+          </g>
+        </svg>
+      </button>
+      <button
+        type="button"
+        class="theme-btn theme-btn-dark"
+        data-theme-choice="dark"
+        aria-label="Dark mode"
+        aria-pressed="true"
+      >
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path
+            fill="currentColor"
+            d="M14.8 3.2a8.8 8.8 0 1 0 6 14.7 7.2 7.2 0 1 1-6-14.7z"
+          />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <script src="js/site.js?v=47"></script>
+  <script src="js/home.js?v=2"></script>
+  <script src="js/work.js?v=9"></script>
+  <script src="js/scroll-nav.js?v=10"></script>
+  <script src="js/theme.js?v=2"></script>
 </body>
 </html>

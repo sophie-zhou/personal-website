@@ -5,6 +5,7 @@
     : [];
   var sections = Array.prototype.slice.call(document.querySelectorAll('[data-work-section]'));
   var exhibits = Array.prototype.slice.call(document.querySelectorAll('[data-work-exhibit]'));
+  var entranceReady = false;
 
   function typeExhibit(exhibit) {
     window.clearTimeout(exhibit.typingTimer);
@@ -36,7 +37,27 @@
     typeNextCharacter();
   }
 
-  function setFilter(filter) {
+  function clearExhibits() {
+    exhibits.forEach(function (exhibit) {
+      window.clearTimeout(exhibit.typingTimer);
+      exhibit.textContent = '';
+      exhibit.classList.remove('work-exhibit-typing', 'work-exhibit-done');
+    });
+  }
+
+  function typeActiveExhibit() {
+    exhibits.forEach(function (exhibit) {
+      var isActive = !exhibit.hidden;
+      if (!isActive) {
+        window.clearTimeout(exhibit.typingTimer);
+        return;
+      }
+      typeExhibit(exhibit);
+    });
+  }
+
+  function setFilter(filter, options) {
+    options = options || {};
     buttons.forEach(function (button) {
       button.classList.toggle('active', button.getAttribute('data-filter') === filter);
     });
@@ -47,8 +68,23 @@
       var isActive = exhibit.getAttribute('data-work-exhibit') === filter;
       if (!isActive) window.clearTimeout(exhibit.typingTimer);
       exhibit.hidden = !isActive;
-      if (isActive) typeExhibit(exhibit);
+      if (!isActive) {
+        exhibit.textContent = '';
+        exhibit.classList.remove('work-exhibit-typing', 'work-exhibit-done');
+      }
     });
+
+    if (options.skipType) {
+      clearExhibits();
+      return;
+    }
+
+    if (!entranceReady && options.waitForEntrance) {
+      clearExhibits();
+      return;
+    }
+
+    typeActiveExhibit();
   }
 
   if (tabs) {
@@ -60,11 +96,21 @@
 
     var hash = (window.location.hash || '').replace('#', '');
     if (hash === 'research') {
-      setFilter('research');
+      setFilter('research', { waitForEntrance: true });
     } else {
-      setFilter('art');
+      setFilter('art', { waitForEntrance: true });
     }
   }
+
+  window.addEventListener('sophie:start-work-exhibit', function () {
+    entranceReady = true;
+    typeActiveExhibit();
+  });
+
+  window.addEventListener('sophie:reset-work-exhibit', function () {
+    entranceReady = false;
+    clearExhibits();
+  });
 
   var lightbox = document.createElement('div');
   lightbox.className = 'art-lightbox';
@@ -102,7 +148,7 @@
     lightbox.classList.remove('open');
     lightbox.setAttribute('aria-hidden', 'true');
     lightboxImg.removeAttribute('src');
-    document.body.style.overflow = '';
+    document.body.style.overflow = 'auto';
   }
 
   document.querySelectorAll('.art-piece img').forEach(function (img) {

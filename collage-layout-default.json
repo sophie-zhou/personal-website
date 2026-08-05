@@ -1,8 +1,8 @@
 {
   "pieces": {
     "grid-a": {
-      "left": "18.8242px",
-      "top": "171.176px",
+      "left": "2.02344px",
+      "top": "132.969px",
       "right": "auto",
       "bottom": "auto",
       "width": "242px",
@@ -12,8 +12,8 @@
       "display": ""
     },
     "grid-b": {
-      "left": "947.109px",
-      "top": "39.125px",
+      "left": "938.387px",
+      "top": "1.89453px",
       "right": "auto",
       "bottom": "auto",
       "width": "265px",
@@ -23,8 +23,8 @@
       "display": ""
     },
     "paper-a": {
-      "left": "534.789px",
-      "top": "92.8555px",
+      "left": "538.078px",
+      "top": "77.8906px",
       "right": "auto",
       "bottom": "auto",
       "width": "299px",
@@ -78,8 +78,8 @@
       "display": "none"
     },
     "kraft-strip": {
-      "left": "263px",
-      "top": "-5px",
+      "left": "467.008px",
+      "top": "-39.3086px",
       "right": "auto",
       "bottom": "auto",
       "width": "679px",
@@ -122,8 +122,8 @@
       "display": ""
     },
     "landscape-mountain": {
-      "left": "942.746px",
-      "top": "124.199px",
+      "left": "953.215px",
+      "top": "106.102px",
       "right": "auto",
       "bottom": "auto",
       "width": "408px",
@@ -133,8 +133,8 @@
       "display": ""
     },
     "nature-canyon": {
-      "left": "1042.17px",
-      "top": "390.008px",
+      "left": "1048.69px",
+      "top": "365.711px",
       "right": "auto",
       "bottom": "auto",
       "width": "306px",
@@ -166,8 +166,8 @@
       "display": "none"
     },
     "detail-tennis-rackets": {
-      "left": "786.023px",
-      "top": "385.211px",
+      "left": "787.984px",
+      "top": "386.648px",
       "right": "auto",
       "bottom": "auto",
       "width": "182px",
@@ -199,8 +199,8 @@
       "display": ""
     },
     "detail-paint-brushes": {
-      "left": "918.359px",
-      "top": "333.637px",
+      "left": "922.246px",
+      "top": "318.258px",
       "right": "auto",
       "bottom": "auto",
       "width": "214px",
@@ -221,19 +221,19 @@
       "display": ""
     },
     "detail-matcha-poster": {
-      "left": "202.812px",
-      "top": "61.7188px",
+      "left": "177.766px",
+      "top": "-16.6367px",
       "right": "auto",
       "bottom": "auto",
-      "width": "132px",
-      "height": "149px",
+      "width": "160px",
+      "height": "180px",
       "transform": "rotate(-11deg)",
       "zIndex": "-12",
       "display": ""
     },
     "detail-wax-leaf": {
-      "left": "673.168px",
-      "top": "47.5078px",
+      "left": "706.973px",
+      "top": "-7.26172px",
       "right": "auto",
       "bottom": "auto",
       "width": "125px",
@@ -254,23 +254,23 @@
       "display": ""
     },
     "detail-line-bouquet": {
-      "left": "-2.64062px",
-      "top": "237.199px",
+      "left": "15.7031px",
+      "top": "205px",
       "right": "auto",
       "bottom": "auto",
-      "width": "81px",
-      "height": "115px",
+      "width": "98px",
+      "height": "140px",
       "transform": "rotate(-25deg)",
       "zIndex": "0",
       "display": ""
     },
     "detail-autumn-flowers": {
-      "left": "-36px",
-      "top": "59px",
+      "left": "-33.9375px",
+      "top": "-10.4727px",
       "right": "auto",
       "bottom": "auto",
-      "width": "190px",
-      "height": "177px",
+      "width": "209px",
+      "height": "195px",
       "transform": "rotate(179deg)",
       "zIndex": "101",
       "display": ""
@@ -298,12 +298,12 @@
       "display": ""
     },
     "detail-orange-stamp": {
-      "left": "57.2461px",
-      "top": "101.531px",
+      "left": "62.0742px",
+      "top": "60.0703px",
       "right": "auto",
       "bottom": "auto",
-      "width": "87.3px",
-      "height": "117.9px",
+      "width": "96px",
+      "height": "130px",
       "transform": "rotate(14deg)",
       "zIndex": "-15",
       "display": ""
@@ -320,8 +320,8 @@
       "display": "none"
     },
     "detail-script-butterfly": {
-      "left": "751.211px",
-      "top": "310.199px",
+      "left": "754.914px",
+      "top": "281.906px",
       "right": "auto",
       "bottom": "auto",
       "width": "138px",
@@ -331,8 +331,8 @@
       "display": ""
     },
     "detail-tape-butterfly": {
-      "left": "442.07px",
-      "top": "64.457px",
+      "left": "411.371px",
+      "top": "31.7227px",
       "right": "auto",
       "bottom": "auto",
       "width": "163px",
@@ -342,8 +342,8 @@
       "display": ""
     },
     "detail-art-collage": {
-      "left": "1246.48px",
-      "top": "261.598px",
+      "left": "1246.87px",
+      "top": "218.449px",
       "right": "auto",
       "bottom": "auto",
       "width": "187px",
@@ -386,8 +386,8 @@
       "display": ""
     },
     "detail-postage-blank": {
-      "left": "619.785px",
-      "top": "182.625px",
+      "left": "653.117px",
+      "top": "149.695px",
       "right": "auto",
       "bottom": "auto",
       "width": "116px",
@@ -397,19 +397,19 @@
       "display": ""
     },
     "detail-graph-paper-extra": {
-      "left": "684.406px",
-      "top": "264.273px",
+      "left": "1138.81px",
+      "top": "-20.2461px",
       "right": "auto",
       "bottom": "auto",
-      "width": "83px",
-      "height": "83px",
+      "width": "237px",
+      "height": "237px",
       "transform": "rotate(-11deg)",
-      "zIndex": "117",
+      "zIndex": "-23",
       "display": ""
     },
     "detail-graph-paper-b": {
-      "left": "283.652px",
-      "top": "33.582px",
+      "left": "321.266px",
+      "top": "4.10938px",
       "right": "auto",
       "bottom": "auto",
       "width": "211px",
@@ -419,8 +419,8 @@
       "display": ""
     },
     "detail-gold-wax-seal": {
-      "left": "881.539px",
-      "top": "283.441px",
+      "left": "878.477px",
+      "top": "286.191px",
       "right": "auto",
       "bottom": "auto",
       "width": "95px",
@@ -430,8 +430,8 @@
       "display": ""
     },
     "detail-postmark-solid": {
-      "left": "359.039px",
-      "top": "19.125px",
+      "left": "306.523px",
+      "top": "4.71484px",
       "right": "auto",
       "bottom": "auto",
       "width": "129px",
@@ -452,8 +452,8 @@
       "display": ""
     },
     "detail-watercolor-leaf": {
-      "left": "1010.83px",
-      "top": "29.9492px",
+      "left": "1036.52px",
+      "top": "-13.457px",
       "right": "auto",
       "bottom": "auto",
       "width": "179px",
@@ -463,8 +463,8 @@
       "display": ""
     },
     "detail-paper-butterfly": {
-      "left": "663.879px",
-      "top": "498.527px",
+      "left": "667.879px",
+      "top": "498.41px",
       "right": "auto",
       "bottom": "auto",
       "width": "122px",
@@ -474,8 +474,8 @@
       "display": ""
     },
     "detail-austria-stamp": {
-      "left": "-40.5156px",
-      "top": "327.035px",
+      "left": "-35.7422px",
+      "top": "500.434px",
       "right": "auto",
       "bottom": "auto",
       "width": "116px",
@@ -507,23 +507,23 @@
       "display": ""
     },
     "detail-gear-sketch": {
-      "left": "157.59px",
-      "top": "183.762px",
+      "left": "162.48px",
+      "top": "145.789px",
       "right": "auto",
       "bottom": "auto",
-      "width": "213px",
-      "height": "376px",
+      "width": "234.3px",
+      "height": "413.6px",
       "transform": "rotate(-8deg)",
       "zIndex": "-18",
       "display": ""
     },
     "detail-graph-paper-c": {
-      "left": "13.1094px",
-      "top": "260.848px",
+      "left": "-1.42188px",
+      "top": "272.613px",
       "right": "auto",
       "bottom": "auto",
-      "width": "86px",
-      "height": "93px",
+      "width": "169px",
+      "height": "178px",
       "transform": "rotate(-12deg)",
       "zIndex": "-15",
       "display": ""
@@ -551,8 +551,8 @@
       "display": ""
     },
     "detail-white-blossom-branch": {
-      "left": "616.914px",
-      "top": "248.672px",
+      "left": "644.867px",
+      "top": "214.234px",
       "right": "auto",
       "bottom": "auto",
       "width": "138px",
@@ -573,12 +573,12 @@
       "display": ""
     },
     "detail-italy-stamp": {
-      "left": "64.0078px",
-      "top": "285.648px",
+      "left": "56.9961px",
+      "top": "331.875px",
       "right": "auto",
       "bottom": "auto",
-      "width": "120px",
-      "height": "120px",
+      "width": "132px",
+      "height": "132px",
       "transform": "rotate(9deg)",
       "zIndex": "114",
       "display": ""
@@ -595,8 +595,8 @@
       "display": "none"
     },
     "detail-wax-botanical": {
-      "left": "449px",
-      "top": "351.941px",
+      "left": "456.906px",
+      "top": "414.414px",
       "right": "auto",
       "bottom": "auto",
       "width": "156px",
@@ -606,8 +606,8 @@
       "display": ""
     },
     "detail-paper-butterfly-b": {
-      "left": "347.426px",
-      "top": "387.012px",
+      "left": "287.953px",
+      "top": "386.066px",
       "right": "auto",
       "bottom": "auto",
       "width": "124px",
@@ -617,12 +617,12 @@
       "display": ""
     },
     "detail-script-butterfly-b": {
-      "left": "464.895px",
-      "top": "439.277px",
+      "left": "1249.12px",
+      "top": "-16.6992px",
       "right": "auto",
       "bottom": "auto",
-      "width": "122px",
-      "height": "108px",
+      "width": "132px",
+      "height": "118px",
       "transform": "rotate(-2deg)",
       "zIndex": "113",
       "display": ""
@@ -661,19 +661,19 @@
       "display": ""
     },
     "detail-sheet-music-scrap": {
-      "left": "510.48px",
-      "top": "33.4883px",
+      "left": "508.891px",
+      "top": "-11.8164px",
       "right": "auto",
       "bottom": "auto",
-      "width": "177px",
-      "height": "204px",
+      "width": "215px",
+      "height": "246px",
       "transform": "rotate(6deg)",
       "zIndex": "1",
       "display": ""
     },
     "detail-vangogh-stamp": {
-      "left": "1262.82px",
-      "top": "358.801px",
+      "left": "1262.14px",
+      "top": "337.555px",
       "right": "auto",
       "bottom": "auto",
       "width": "134px",
@@ -716,19 +716,19 @@
       "display": ""
     },
     "detail-music-page": {
-      "left": "739.184px",
-      "top": "42.168px",
+      "left": "752.355px",
+      "top": "-19.1328px",
       "right": "auto",
       "bottom": "auto",
-      "width": "251px",
-      "height": "306px",
+      "width": "276px",
+      "height": "337px",
       "transform": "rotate(-4deg)",
       "zIndex": "1",
       "display": ""
     },
     "flower-bouquet": {
-      "left": "1230.87px",
-      "top": "474.301px",
+      "left": "1230.43px",
+      "top": "473.277px",
       "right": "auto",
       "bottom": "auto",
       "width": "195px",
@@ -749,8 +749,8 @@
       "display": ""
     },
     "postmark": {
-      "left": "829.5px",
-      "top": "177.816px",
+      "left": "839.984px",
+      "top": "166.656px",
       "right": "auto",
       "bottom": "auto",
       "width": "144px",
@@ -760,8 +760,8 @@
       "display": ""
     },
     "butterfly": {
-      "left": "668px",
-      "top": "167px",
+      "left": "674.125px",
+      "top": "48.1953px",
       "right": "auto",
       "bottom": "auto",
       "width": "138px",
@@ -771,8 +771,8 @@
       "display": ""
     },
     "leafy-branch": {
-      "left": "915.195px",
-      "top": "72.6523px",
+      "left": "934.172px",
+      "top": "36.9727px",
       "right": "auto",
       "bottom": "auto",
       "width": "155px",
@@ -815,8 +815,8 @@
       "display": "none"
     },
     "tickets": {
-      "left": "319.023px",
-      "top": "112.078px",
+      "left": "343.836px",
+      "top": "90.3945px",
       "right": "auto",
       "bottom": "auto",
       "width": "224px",
@@ -826,8 +826,8 @@
       "display": ""
     },
     "branch-drawing": {
-      "left": "543px",
-      "top": "13px",
+      "left": "533px",
+      "top": "-22px",
       "right": "auto",
       "bottom": "auto",
       "width": "197px",
@@ -861,7 +861,7 @@
   },
   "users": [],
   "panel": {
-    "left": 1061.24,
-    "top": 79.7188
+    "left": 1044.55,
+    "top": 105.816
   }
 }

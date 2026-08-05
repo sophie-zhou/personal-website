@@ -5,8 +5,11 @@
 
   var fullText = title.getAttribute('data-text') || "Hello, I'm Sophie Zhou!";
   var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var typingStarted = false;
 
   function typeTitle() {
+    if (typingStarted) return;
+    typingStarted = true;
     var index = 0;
     title.textContent = '';
     card.classList.add('hero-typing');
@@ -15,7 +18,7 @@
       index += 1;
       title.textContent = fullText.slice(0, index);
       if (index < fullText.length) {
-        window.setTimeout(tick, 48);
+        window.setTimeout(tick, 34);
       } else {
         card.classList.add('hero-typed');
       }
@@ -31,6 +34,8 @@
   }
 
   card.classList.add('hero-enter');
+  // Start typing almost immediately while the card is still bouncing in.
+  window.setTimeout(typeTitle, 180);
   card.addEventListener('animationend', function onBounce(event) {
     if (event.animationName !== 'heroCardBounce') return;
     card.removeEventListener('animationend', onBounce);
