@@ -4,10 +4,6 @@
   collage.className = 'collage-bg';
   collage.setAttribute('aria-hidden', 'true');
   collage.innerHTML = [
-    '<div class="bg-blob bg-blob-1"></div>',
-    '<div class="bg-blob bg-blob-2"></div>',
-    '<div class="bg-blob bg-blob-3"></div>',
-    '<div class="bg-grid-paper"></div>',
     '<div class="collage-piece grid-scrap grid-scrap-a" data-collage-id="grid-a"></div>',
     '<div class="collage-piece grid-scrap grid-scrap-b" data-collage-id="grid-b"></div>',
     '<div class="collage-piece old-paper old-paper-a" data-collage-id="paper-a"></div>',

@@ -44,65 +44,16 @@ body {
   z-index: 0;
   pointer-events: none;
   overflow: hidden;
+  background:
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E"),
+    linear-gradient(165deg, #f2eadc 0%, #e8dcc8 45%, #e0d2bc 100%);
 }
 
 .collage-bg .collage-piece {
   pointer-events: none;
 }
-  background:
-    url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E"),
-    radial-gradient(ellipse at 15% 20%, rgba(196, 184, 212, 0.35) 0%, transparent 50%),
-    radial-gradient(ellipse at 85% 75%, rgba(184, 92, 56, 0.2) 0%, transparent 45%),
-    radial-gradient(ellipse at 70% 15%, rgba(107, 128, 96, 0.25) 0%, transparent 40%),
-    linear-gradient(165deg, #f0e8d8 0%, #e8dcc8 40%, #ddd0bc 100%);
-}
 
-.bg-blob {
-  position: absolute;
-  border-radius: 50%;
-  filter: blur(40px);
-  opacity: 0.5;
-}
-
-.bg-blob-1 {
-  width: 420px;
-  height: 420px;
-  top: -80px;
-  right: -60px;
-  background: rgba(196, 184, 212, 0.45);
-}
-
-.bg-blob-2 {
-  width: 350px;
-  height: 350px;
-  bottom: -60px;
-  left: -40px;
-  background: rgba(107, 128, 96, 0.35);
-}
-
-.bg-blob-3 {
-  width: 280px;
-  height: 280px;
-  top: 40%;
-  left: 35%;
-  background: rgba(184, 92, 56, 0.2);
-}
-
-.bg-grid-paper {
-  position: absolute;
-  top: 12%;
-  left: 4%;
-  width: 200px;
-  height: 240px;
-  opacity: 0.18;
-  transform: rotate(-8deg);
-  background:
-    linear-gradient(rgba(26, 24, 20, 0.15) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(26, 24, 20, 0.15) 1px, transparent 1px);
-  background-size: 14px 14px;
-  background-color: rgba(250, 246, 238, 0.6);
-  box-shadow: 2px 3px 10px rgba(26, 24, 20, 0.08);
-}
+/* Old decorative blobs/grid removed — they showed as a faint purple box in the corner */
 
 .float-scrap {
   position: absolute;
