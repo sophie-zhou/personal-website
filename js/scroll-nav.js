@@ -51,23 +51,19 @@
   function playWorkEntrance() {
     if (!work) return;
     resetWorkEntrance();
-
-    // Force a reflow so the rise animation can replay.
-    void work.offsetWidth;
+    work.classList.add('work-enter');
 
     if (reduceMotion) {
-      work.classList.add('work-enter', 'work-exhibit-ready', 'work-settled');
+      work.classList.add('work-exhibit-ready', 'work-settled');
       window.dispatchEvent(new CustomEvent('sophie:start-work-exhibit'));
       return;
     }
 
-    requestAnimationFrame(function () {
-      work.classList.add('work-enter');
-      exhibitTimer = window.setTimeout(function () {
-        work.classList.add('work-exhibit-ready', 'work-settled');
-        window.dispatchEvent(new CustomEvent('sophie:start-work-exhibit'));
-      }, 920);
-    });
+    // Short delay only for the exhibit typing cue — layout stays put.
+    exhibitTimer = window.setTimeout(function () {
+      work.classList.add('work-exhibit-ready', 'work-settled');
+      window.dispatchEvent(new CustomEvent('sophie:start-work-exhibit'));
+    }, 280);
   }
 
   function showContent(sectionId) {
