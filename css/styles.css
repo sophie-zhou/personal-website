@@ -2007,6 +2007,7 @@ html[data-theme="dark"] .page-scroll.panel-revealed .resume-doc-icon {
   margin-bottom: 24px;
   flex: 1;
   min-height: 0;
+  overflow: visible;
 }
 
 .work-section-title {
@@ -2037,14 +2038,17 @@ html[data-theme="dark"] .page-scroll.panel-revealed .resume-doc-icon {
   grid-template-rows: repeat(3, minmax(155px, auto));
   gap: 8px;
   min-height: 0;
-  overflow-x: clip;
-  overflow-y: visible;
+  /* Room for scale(1.02) so card edges / paper links aren't clipped */
+  overflow: visible;
+  padding-inline: 1.25%;
+  box-sizing: border-box;
   position: relative;
   z-index: 6;
 }
 
 [data-work-section="research"] {
   margin-top: -8px;
+  overflow: visible;
 }
 
 .research-card {
@@ -2052,6 +2056,9 @@ html[data-theme="dark"] .page-scroll.panel-revealed .resume-doc-icon {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  min-width: 0;
+  width: 100%;
+  overflow: visible;
   padding: 20px 48px;
   background: rgba(245, 234, 214, 0.97);
   border: 0;
@@ -2061,10 +2068,8 @@ html[data-theme="dark"] .page-scroll.panel-revealed .resume-doc-icon {
   transform-origin: center center;
 }
 
-/* No scale — wide cards blow out sideways even at tiny scale factors */
 .research-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 5px 10px 18px rgba(26, 24, 20, 0.14);
+  transform: scale(1.02);
   z-index: 2;
 }
 
@@ -2084,6 +2089,9 @@ html[data-theme="dark"] .page-scroll.panel-revealed .resume-doc-icon {
 
 .research-card a {
   align-self: flex-start;
+  flex-shrink: 0;
+  max-width: none;
+  white-space: nowrap;
   color: var(--color-ink);
   font-family: var(--font-typewriter);
   font-size: 0.82rem;
@@ -2149,7 +2157,7 @@ html[data-theme="dark"] .page-scroll.panel-revealed .resume-doc-icon {
 }
 
 .art-piece:hover {
-  transform: scale(1.015);
+  transform: scale(1.04);
   z-index: 6;
 }
 
