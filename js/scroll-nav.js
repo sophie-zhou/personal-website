@@ -51,19 +51,30 @@
   function playWorkEntrance() {
     if (!work) return;
     resetWorkEntrance();
-    work.classList.add('work-enter');
 
     if (reduceMotion) {
-      work.classList.add('work-exhibit-ready', 'work-settled');
+      work.classList.add('work-enter', 'work-exhibit-ready', 'work-settled');
       window.dispatchEvent(new CustomEvent('sophie:start-work-exhibit'));
       return;
     }
 
-    // Short delay only for the exhibit typing cue — layout stays put.
-    exhibitTimer = window.setTimeout(function () {
-      work.classList.add('work-exhibit-ready', 'work-settled');
-      window.dispatchEvent(new CustomEvent('sophie:start-work-exhibit'));
-    }, 280);
+    // Reflow so workRiseIn can replay when returning from Home.
+    // Parked styles (opacity 0 + translateY) hold until work-enter; fill-mode
+    // `both` keeps that from-state through each stagger delay.
+    void work.offsetWidth;
+    requestAnimationFrame(function () {
+      work.classList.add('work-enter');
+      // Last stagger ~0.72s + 0.7s duration; then exhibit typing.
+      // Drop work-enter on settle so nth-child animation rules (higher
+      // specificity than .work-settled) cannot keep fill/transform stuck —
+      // needed for research cards that were [hidden] during the rise, and
+      // so hover scale (1.04 / 1.02) can apply.
+      exhibitTimer = window.setTimeout(function () {
+        work.classList.remove('work-enter');
+        work.classList.add('work-exhibit-ready', 'work-settled');
+        window.dispatchEvent(new CustomEvent('sophie:start-work-exhibit'));
+      }, 1500);
+    });
   }
 
   function showContent(sectionId) {

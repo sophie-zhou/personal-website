@@ -1125,6 +1125,82 @@ html[data-theme="dark"] .page-scroll.panel-revealed .resume-doc-icon {
   transform: none;
 }
 
+/*
+ * Work content rises from below after the white panel.
+ * Parked styles apply before enter. Use fill-mode `both` so the from-state
+ * (opacity 0 + translateY) holds through the delay — `forwards` alone lets
+ * content flash at rest once .work-enter removes the parked selector.
+ * .work-settled clears the animation fill so hover scale (1.04 / 1.02) can apply.
+ */
+.section-work:not(.work-enter):not(.work-settled) .work-header .page-title,
+.section-work:not(.work-enter):not(.work-settled) .work-toolbar .tabs,
+.section-work:not(.work-enter):not(.work-settled) .art-piece,
+.section-work:not(.work-enter):not(.work-settled) .research-card {
+  opacity: 0;
+  transform: translateY(64px);
+}
+
+/* Title → toolbar → pieces; delays let the panel lead */
+.section-work.work-enter .work-header .page-title {
+  animation: workRiseIn 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.28s both;
+}
+
+.section-work.work-enter .work-toolbar .tabs {
+  animation: workRiseIn 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.36s both;
+}
+
+.section-work.work-enter .art-col-vert .art-piece:nth-child(1) {
+  animation: workRiseIn 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.44s both;
+}
+.section-work.work-enter .art-col-vert .art-piece:nth-child(2) {
+  animation: workRiseIn 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.5s both;
+}
+.section-work.work-enter .art-col-vert .art-piece:nth-child(3) {
+  animation: workRiseIn 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.56s both;
+}
+.section-work.work-enter .art-col-vert .art-piece:nth-child(4) {
+  animation: workRiseIn 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.62s both;
+}
+
+.section-work.work-enter .art-col-horiz .art-piece:nth-child(1) {
+  animation: workRiseIn 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.48s both;
+}
+.section-work.work-enter .art-col-horiz .art-piece:nth-child(2) {
+  animation: workRiseIn 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.54s both;
+}
+.section-work.work-enter .art-col-horiz .art-piece:nth-child(3) {
+  animation: workRiseIn 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.6s both;
+}
+.section-work.work-enter .art-col-horiz .art-piece:nth-child(4) {
+  animation: workRiseIn 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.66s both;
+}
+.section-work.work-enter .art-col-horiz .art-piece:nth-child(5) {
+  animation: workRiseIn 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.72s both;
+}
+
+.section-work.work-enter .research-card:nth-child(1) {
+  animation: workRiseIn 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.44s both;
+}
+.section-work.work-enter .research-card:nth-child(2) {
+  animation: workRiseIn 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.52s both;
+}
+.section-work.work-enter .research-card:nth-child(3) {
+  animation: workRiseIn 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.6s both;
+}
+
+/*
+ * After JS removes .work-enter and adds .work-settled, ensure content is
+ * visible at rest. Do not set transform here — that would override hover
+ * scale (art 1.04 / research 1.02).
+ */
+.section-work.work-settled .work-header .page-title,
+.section-work.work-settled .work-toolbar .tabs,
+.section-work.work-settled .art-piece,
+.section-work.work-settled .research-card {
+  animation: none;
+  opacity: 1;
+}
+
 .section-work .work-exhibit {
   opacity: 0;
   transition: opacity 0.2s ease;
@@ -1132,6 +1208,17 @@ html[data-theme="dark"] .page-scroll.panel-revealed .resume-doc-icon {
 
 .section-work.work-exhibit-ready .work-exhibit:not([hidden]) {
   opacity: 1;
+}
+
+@keyframes workRiseIn {
+  from {
+    opacity: 0;
+    transform: translateY(64px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* ── Side flower navigation ── */
@@ -2961,6 +3048,8 @@ html[data-theme="dark"] .page-scroll.panel-revealed .resume-doc-icon {
   .section-work,
   .section-resume,
   .section-contact,
+  .section-work .work-header .page-title,
+  .section-work .work-toolbar .tabs,
   .section-work .work-exhibit,
   .section-work .art-piece,
   .section-work .research-card,
@@ -2976,7 +3065,12 @@ html[data-theme="dark"] .page-scroll.panel-revealed .resume-doc-icon {
     transform: none;
   }
 
+  .section-work:not(.work-enter):not(.work-settled) .work-header .page-title,
+  .section-work:not(.work-enter):not(.work-settled) .work-toolbar .tabs,
+  .section-work:not(.work-enter):not(.work-settled) .art-piece,
+  .section-work:not(.work-enter):not(.work-settled) .research-card,
   .section-work .work-exhibit {
     opacity: 1;
+    transform: none;
   }
 }
