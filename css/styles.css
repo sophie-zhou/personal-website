@@ -1894,11 +1894,16 @@ html[data-theme="dark"] .page-scroll.panel-revealed .resume-doc-icon {
 }
 
 .tab {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   font-family: var(--font-typewriter);
   font-size: 0.82rem;
   letter-spacing: 0.1em;
+  line-height: 1;
   text-transform: uppercase;
-  padding: 9px 16px;
+  text-align: center;
+  padding: 10px 16px 9px;
   border: 2px solid var(--color-ink);
   border-radius: 999px;
   background: rgba(250, 246, 238, 0.7);
@@ -2032,7 +2037,8 @@ html[data-theme="dark"] .page-scroll.panel-revealed .resume-doc-icon {
   grid-template-rows: repeat(3, minmax(155px, auto));
   gap: 8px;
   min-height: 0;
-  overflow: visible;
+  overflow-x: clip;
+  overflow-y: visible;
   position: relative;
   z-index: 6;
 }
@@ -2051,13 +2057,14 @@ html[data-theme="dark"] .page-scroll.panel-revealed .resume-doc-icon {
   border: 0;
   border-radius: 18px;
   box-shadow: 4px 6px 14px rgba(26, 24, 20, 0.1);
-  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
   transform-origin: center center;
 }
 
-.research-card:hover,
-.research-card.is-scaled {
-  transform: scale(1.06);
+/* No scale — wide cards blow out sideways even at tiny scale factors */
+.research-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 5px 10px 18px rgba(26, 24, 20, 0.14);
   z-index: 2;
 }
 
@@ -2141,9 +2148,8 @@ html[data-theme="dark"] .page-scroll.panel-revealed .resume-doc-icon {
   cursor: pointer;
 }
 
-.art-piece:hover,
-.art-piece.is-scaled {
-  transform: scale(1.08);
+.art-piece:hover {
+  transform: scale(1.015);
   z-index: 6;
 }
 
@@ -2427,6 +2433,15 @@ html[data-theme="dark"] .page-scroll.panel-revealed .resume-doc-icon {
   margin-top: 12px;
 }
 
+.contact-form-note {
+  margin: 12px 0 0;
+  font-family: var(--font-typewriter);
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  line-height: 1.4;
+  color: rgba(26, 24, 20, 0.62);
+}
+
 .contact-form label {
   font-family: var(--font-typewriter);
   font-size: 0.78rem;
@@ -2468,11 +2483,16 @@ html[data-theme="dark"] .page-scroll.panel-revealed .resume-doc-icon {
 }
 
 .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   font-family: var(--font-typewriter);
   font-size: 0.85rem;
   letter-spacing: 0.12em;
+  line-height: 1;
   text-transform: uppercase;
-  padding: 12px 26px;
+  text-align: center;
+  padding: 13px 26px 11px;
   border: 2px solid var(--color-ink);
   border-radius: 999px;
   background: var(--color-terracotta);
@@ -2690,14 +2710,19 @@ html[data-theme="dark"] .page-scroll.panel-revealed .resume-doc-icon {
 
 .collage-editor-toggle {
   position: static;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   border: 2px solid var(--color-ink);
   border-radius: 999px;
-  padding: 10px 14px;
+  padding: 11px 14px 9px;
   background: var(--color-cream);
   color: var(--color-ink);
   font-family: var(--font-typewriter);
   font-size: 0.75rem;
   letter-spacing: 0.08em;
+  line-height: 1;
+  text-align: center;
   cursor: pointer;
   box-shadow: 4px 5px 0 rgba(26, 24, 20, 0.22);
   transition: transform 0.2s ease, background 0.15s ease, color 0.15s ease;

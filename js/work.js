@@ -151,24 +151,8 @@
     document.body.style.overflow = 'auto';
   }
 
-  // Same hover enlarge behavior as the tab buttons (transform: scale).
-  function bindScaleHover(selector, amount) {
-    Array.prototype.forEach.call(document.querySelectorAll(selector), function (el) {
-      el.addEventListener('mouseenter', function () {
-        el.classList.add('is-scaled');
-        el.style.transform = 'scale(' + amount + ')';
-        el.style.zIndex = '8';
-      });
-      el.addEventListener('mouseleave', function () {
-        el.classList.remove('is-scaled');
-        el.style.transform = '';
-        el.style.zIndex = '';
-      });
-    });
-  }
-
-  bindScaleHover('.art-piece', '1.08');
-  bindScaleHover('.research-card', '1.06');
+  // Hover scale is controlled only in CSS (.art-piece:hover / .research-card:hover)
+  // so size tweaks always take effect without stale inline styles.
 
   document.querySelectorAll('.art-piece img').forEach(function (img) {
     var piece = img.closest('.art-piece');
